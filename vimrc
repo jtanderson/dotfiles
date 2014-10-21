@@ -1,7 +1,15 @@
 execute pathogen#infect()
 
+" My Plugins: (in ~/.vim/bundle)
+" =================================
+" https://github.com/kien/ctrlp.vim
+" https://github.com/scrooloose/nerdtree
+" https://github.com/xuhdev/vim-latex-live-preview
+" git://github.com/tpope/vim-sensible.git
+
 syntax on
 filetype plugin indent on
+set number
 
 let g:livepreview_previewer = 'open -a Skim'
 
