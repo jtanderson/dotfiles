@@ -11,6 +11,11 @@ syntax on
 filetype plugin indent on
 set number
 
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set backspace=2
+
 let g:livepreview_previewer = 'open -a Skim'
 
 map <C-n> :NERDTreeToggle<CR>
