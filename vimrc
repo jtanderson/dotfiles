@@ -29,3 +29,7 @@ endif
 
 autocmd BufEnter *.tex colorscheme kellys
 autocmd BufEnter *.tex setlocal spell spelllang=en_us
+
+let g:Tex_MultipleCompileFormats = 'pdf'
+
+autocmd BufEnter *.tex map <C-b> :w<enter>\ll
