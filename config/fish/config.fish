@@ -15,3 +15,10 @@ set fish_theme clearance2
 . $fish_path/oh-my-fish.fish
 
 . $HOME/.config/fish/config.orig
+
+set -x DOCKER_HOST tcp://192.168.59.103:2376
+set -x DOCKER_CERT_PATH ~/.boot2docker/certs/boot2docker-vm
+set -x DOCKER_TLS_VERIFY 1
+set -x PATH $PATH ~/.composer/vendor/bin
+
+fish_vi_mode
