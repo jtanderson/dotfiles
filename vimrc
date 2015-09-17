@@ -26,3 +26,6 @@ if has("gui_running")
 	set guifont=Anonymous\ Pro:h16
 	set lines=141 columns=141
 endif
+
+autocmd BufEnter *.tex colorscheme kellys
+autocmd BufEnter *.tex setlocal spell spelllang=en_us
