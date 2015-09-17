@@ -26,3 +26,7 @@ if has("gui_running")
 	set guifont=Anonymous\ Pro:h16
 	set lines=141 columns=141
 endif
+
+let g:Tex_MultipleCompileFormats = 'pdf'
+
+map <C-b> :w<enter>\ll
