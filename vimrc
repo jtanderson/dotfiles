@@ -29,4 +29,5 @@ endif
 
 let g:Tex_MultipleCompileFormats = 'pdf'
 
-map <C-b> :w<enter>\ll
+" map <C-b> :w<enter>\ll
+map <F2> :w<enter>\ll
