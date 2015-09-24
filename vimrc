@@ -27,6 +27,9 @@ if has("gui_running")
 	set lines=141 columns=141
 endif
 
+autocmd BufEnter *.tex colorscheme kellys
+autocmd BufEnter *.tex setlocal spell spelllang=en_us
+
 let g:Tex_MultipleCompileFormats = 'pdf'
 
 " map <C-b> :w<enter>\ll
