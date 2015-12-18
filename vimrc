@@ -1,6 +1,6 @@
 execute pathogen#infect()
 
-" My Plugins: (in ~/.vim/bundle)
+" My Plugins: (clone into ~/.vim/bundle)
 " =================================
 " https://github.com/kien/ctrlp.vim
 " https://github.com/scrooloose/nerdtree
@@ -34,3 +34,7 @@ let g:Tex_MultipleCompileFormats = 'pdf'
 
 " map <C-b> :w<enter>\ll
 map <F2> :w<enter>\ll
+
+set autochdir
+set listchars=eol:¬
+set list

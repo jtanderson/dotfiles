@@ -15,3 +15,13 @@ set fish_theme clearance2
 . $fish_path/oh-my-fish.fish
 
 . $HOME/.config/fish/config.orig
+
+if [ -d /usr/local/texlive/2014/bin/x86_64-darwin ]
+  set PATH $PATH /usr/local/texlive/2014/bin/x86_64-darwin
+end
+
+if [ -d /usr/local/sbin ]
+  set PATH $PATH /usr/local/sbin
+end
+
+# alias mvim='open -a MacVim'
