@@ -4,8 +4,8 @@ execute pathogen#infect()
 " =================================
 " https://github.com/kien/ctrlp.vim
 " https://github.com/scrooloose/nerdtree
-" https://github.com/xuhdev/vim-latex-live-preview
 " git://github.com/tpope/vim-sensible.git
+" https://github.com/mattn/emmet-vim.git
 
 syntax on
 filetype plugin indent on
