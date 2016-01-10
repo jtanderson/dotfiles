@@ -24,4 +24,12 @@ if [ -d /usr/local/sbin ]
   set PATH $PATH /usr/local/sbin
 end
 
+if [ -d /usr/local/lib/pkgconfig ]
+ set PKG_CONFIG_PATH $PKG_CONFIG_PATH /usr/local/lib/pkgconfig
+end
+
+if [ -d /usr/local/lib ]
+ set PKG_CONFIG_PATH $PKG_CONFIG_PATH /usr/local/lib
+end
+
 # alias mvim='open -a MacVim'
