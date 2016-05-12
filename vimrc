@@ -19,7 +19,7 @@ set backspace=2
 let g:livepreview_previewer = 'open -a Skim'
 
 map <C-n> :NERDTreeToggle<CR>
-map <C-t> :LLPStartPreview<CR>
+" map <C-t> :LLPStartPreview<CR>
 
 if has("gui_running")
 	colorscheme darkblue
