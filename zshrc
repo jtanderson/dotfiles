@@ -107,3 +107,5 @@ fi
 
 export PATH
 export PKG_CONFIG_PATH
+
+alias csetunnel="sshuttle -r andejose@stdlinux.cse.ohio-state.edu --python /home/8/andejose/.linuxbrew/bin/python 0.0.0.0/0"
