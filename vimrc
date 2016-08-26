@@ -4,8 +4,10 @@ execute pathogen#infect()
 " =================================
 " https://github.com/kien/ctrlp.vim
 " https://github.com/scrooloose/nerdtree
-" git://github.com/tpope/vim-sensible.git
+" https://github.com/tpope/vim-sensible.git
 " https://github.com/mattn/emmet-vim.git
+" https://github.com/xolox/vim-misc
+" https://github.com/xolox/vim-session
 
 syntax on
 filetype plugin indent on
@@ -22,9 +24,9 @@ map <C-n> :NERDTreeToggle<CR>
 " map <C-t> :LLPStartPreview<CR>
 
 if has("gui_running")
-	colorscheme darkblue
-	set guifont=Anonymous\ Pro:h16
-	set lines=141 columns=141
+  colorscheme darkblue
+  set guifont=Anonymous\ Pro:h16
+  set lines=141 columns=141
 endif
 
 autocmd BufEnter *.tex colorscheme kellys
@@ -38,3 +40,6 @@ map <F2> :w<enter>\ll
 set autochdir
 set listchars=eol:¬
 set list
+
+let g:session_autosave = 'yes'
+let g:session_autoload = 'yes'

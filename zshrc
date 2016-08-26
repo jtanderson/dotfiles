@@ -105,7 +105,13 @@ if [ -d ~/anaconda ]; then
  PATH=~/anaconda/bin:$PATH
 fi
 
+if [ -d ~/Documents/Dev/go ]; then
+  GOPATH=~/Documents/Dev/go
+  PATH=$PATH:$GOPATH/bin
+fi
+
 export PATH
 export PKG_CONFIG_PATH
+export GOPATH
 
 alias csetunnel="sshuttle -r andejose@stdlinux.cse.ohio-state.edu --python /home/8/andejose/.linuxbrew/bin/python 0.0.0.0/0"
