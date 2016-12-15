@@ -40,6 +40,7 @@ map <F2> :w<enter>\ll
 set autochdir
 set listchars=eol:¬
 set list
+set autoread
 
 let g:session_autosave = 'yes'
 let g:session_autoload = 'yes'
