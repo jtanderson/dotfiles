@@ -81,8 +81,8 @@ source $ZSH/oh-my-zsh.sh
 
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
-if [ -d /usr/local/texlive/2014/bin/x86_64-darwin ]; then
-  PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin
+if [ -d /usr/local/texlive/2016/bin/x86_64-darwin ]; then
+  PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-darwin
 fi
 
 if [ -d /usr/local/sbin ]; then
@@ -108,6 +108,10 @@ fi
 if [ -d ~/Documents/Dev/go ]; then
   GOPATH=~/Documents/Dev/go
   PATH=$PATH:$GOPATH/bin
+fi
+
+if [ -x ~/.dotfiles/scripts/jemdoc.py ]; then
+  alias jemdoc='~/.dotfiles/scripts/jemdoc.py'
 fi
 
 export PATH
