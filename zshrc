@@ -110,10 +110,6 @@ if [ -d ~/Documents/Dev/go ]; then
   PATH=$PATH:$GOPATH/bin
 fi
 
-if [ -x ~/.dotfiles/scripts/jemdoc.py ]; then
-  alias jemdoc='~/.dotfiles/scripts/jemdoc.py'
-fi
-
 export PATH
 export PKG_CONFIG_PATH
 export GOPATH

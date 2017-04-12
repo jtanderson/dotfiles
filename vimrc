@@ -50,12 +50,6 @@ set autoread
 "let g:session_autosave = 'yes'
 "let g:session_autoload = 'yes'
 
-augroup filetypedetect
-  au! BufNewFile,BufRead *.jemdoc setf jemdoc
-augroup END
-
-autocmd Filetype jemdoc setlocal comments=:#,fb:-,fb:.,fb:--,fb:..,fb:\:
-
 " IMPORTANT: grep will sometimes skip displaying the file name if you
 " search in a singe file. This will confuse Latex-Suite. Set your grep
 " program to always generate a file-name.
