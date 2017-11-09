@@ -85,6 +85,10 @@ if [ -d /usr/local/texlive/2016/bin/x86_64-darwin ]; then
   PATH=$PATH:/usr/local/texlive/2016/bin/x86_64-darwin
 fi
 
+if [ -d /usr/local/texlive/2017/bin/x86_64-darwin ]; then
+  PATH=$PATH:/usr/local/texlive/2017/bin/x86_64-darwin
+fi
+
 if [ -d /usr/local/sbin ]; then
   PATH=$PATH:/usr/local/sbin
 fi
@@ -110,8 +114,14 @@ if [ -d ~/Documents/Dev/go ]; then
   PATH=$PATH:$GOPATH/bin
 fi
 
+if [ -d ~/.homebrew ]; then
+  PATH=$PATH:~/.homebrew/bin
+fi
+
 export PATH
 export PKG_CONFIG_PATH
 export GOPATH
 
 alias csetunnel="sshuttle -r andejose@stdlinux.cse.ohio-state.edu --python /home/8/andejose/.linuxbrew/bin/python 0.0.0.0/0"
+
+alias grade="g++ -std=c++11 -o grademe"

@@ -8,6 +8,7 @@ execute pathogen#infect()
 " https://github.com/mattn/emmet-vim.git
 " https://github.com/xolox/vim-misc
 " https://github.com/xolox/vim-session
+" git://github.com/JuliaEditorSupport/julia-vim.git
 
 " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
@@ -30,14 +31,17 @@ map <C-n> :NERDTreeToggle<CR>
 
 if has("gui_running")
   colorscheme darkblue
-  set guifont=Anonymous\ Pro:h16
+  set guifont=Monaco:h16
   set lines=141 columns=141
 endif
+
+colorscheme elflord
 
 autocmd BufEnter *.tex colorscheme kellys
 autocmd BufEnter *.tex setlocal spell spelllang=en_us
 
 let g:Tex_MultipleCompileFormats = 'pdf'
+let g:Tex_ViewRule_pdf = 'Skim'
 
 " map <C-b> :w<enter>\ll
 map <F2> :w<enter>\ll
