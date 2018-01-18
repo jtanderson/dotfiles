@@ -118,10 +118,14 @@ if [ -d ~/.homebrew ]; then
   PATH=$PATH:~/.homebrew/bin
 fi
 
+if [ -d ~/.dotfiles/scripts ]; then
+  PATH=$PATH:~/.dotfiles/scripts
+fi
+
 export PATH
 export PKG_CONFIG_PATH
 export GOPATH
 
 alias csetunnel="sshuttle -r andejose@stdlinux.cse.ohio-state.edu --python /home/8/andejose/.linuxbrew/bin/python 0.0.0.0/0"
-
 alias grade="g++ -std=c++11 -o grademe"
+alias cosclinux="ssh jtanderson@131.118.202.200 -t tmux a"
