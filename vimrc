@@ -15,6 +15,21 @@ execute pathogen#infect()
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
+function! GetRunningOS()
+  if has("win32")
+    return "win"
+  endif
+  if has ("unix")
+    if system('uname') =~ 'Darwin'
+      return "mac"
+    else
+      return "linux"
+    endif
+  endif
+endfunction
+
+let os=GetRunningOS()
+
 syntax on
 filetype plugin indent on
 set number
@@ -24,14 +39,13 @@ set shiftwidth=2
 set expandtab
 set backspace=2
 
-let g:livepreview_previewer = 'open -a Skim'
-
 map <C-n> :NERDTreeToggle<CR>
 " map <C-t> :LLPStartPreview<CR>
 
+set guifont="Monaco:h16"
+
 if has("gui_running")
   colorscheme darkblue
-  set guifont=Monaco:h16
   set lines=141 columns=141
 endif
 
@@ -40,8 +54,15 @@ colorscheme elflord
 autocmd BufEnter *.tex colorscheme kellys
 autocmd BufEnter *.tex setlocal spell spelllang=en_us
 
-let g:Tex_MultipleCompileFormats = 'pdf'
-let g:Tex_ViewRule_pdf = 'Skim'
+let g:Tex_DefaultTargetFormat = 'pdf'
+"let g:Tex_CompileRule_pdf = 'pdflatex --interaction=nonstopmode -synctex=1 $*'
+let g:Tex_MultipleCompileFormats = 'pdf, aux'
+
+if os == "mac"
+  let g:Tex_ViewRule_pdf = 'Skim'
+else
+  let g:Tex_ViewRule_pdf = 'okular'
+endif
 
 " map <C-b> :w<enter>\ll
 map <F2> :w<enter>\ll
