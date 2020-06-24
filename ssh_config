@@ -1,0 +1,13 @@
+Host cosclinux
+  HostName 131.118.202.200
+  User jtanderson
+  ForwardAgent yes
+  ForwardX11 yes
+  IdentityFile ~/.ssh/id_rsa.pub
+
+Host hslinux
+  HostName hslinux
+  User jtanderson
+  ForwardAgent yes
+  ForwardX11 yes
+  IdentityFile ~/.ssh/id_rsa.pub
