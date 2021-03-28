@@ -122,9 +122,42 @@ if [ -d ~/.dotfiles/scripts ]; then
   PATH=$PATH:~/.dotfiles/scripts
 fi
 
+if [ -d /snap/bin ]; then
+  PATH=$PATH:/snap/bin
+fi
+
 export PATH
 export PKG_CONFIG_PATH
 export GOPATH
 
 alias csetunnel="sshuttle -r andejose@stdlinux.cse.ohio-state.edu --python /home/8/andejose/.linuxbrew/bin/python 0.0.0.0/0"
-alias grade="g++ -std=c++11 -o grademe"
+alias grade="g++ -std=c++11 -Wall -o grademe"
+
+alias proj3="$HOME/Dropbox/Documents/Academic/Teaching/Salisbury/COSC-220/projects/project3/SULibTests/grade.sh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$("/home/$USER/anaconda3/bin/conda" 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/$USER/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/$USER/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/$USER/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+man() {
+    env \
+    LESS_TERMCAP_mb="$(printf "\e[1;31m")" \
+    LESS_TERMCAP_md="$(printf "\e[1;31m")" \
+    LESS_TERMCAP_me="$(printf "\e[0m")" \
+    LESS_TERMCAP_se="$(printf "\e[0m")" \
+    LESS_TERMCAP_so="$(printf "\e[1;44;33m")" \
+    LESS_TERMCAP_ue="$(printf "\e[0m")" \
+    LESS_TERMCAP_us="$(printf "\e[1;32m")" \
+    man "${@}"
+}
