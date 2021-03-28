@@ -74,8 +74,8 @@ setup_colors
 
 # script logic here
 
-msg "${RED}Read parameters:${NOFORMAT}"
-msg "- arguments: ${args[*]-}"
+# msg "${RED}Read parameters:${NOFORMAT}"
+# msg "- arguments: ${args[*]-}"
 
 total=${args[0]}
 
@@ -100,7 +100,7 @@ for  i in "${@:2}"; do
   cmd="${cmd}/g\""
 done
 
-echo $cmd
+# echo $cmd
 
 echo $cmd | bash
 
