@@ -1,6 +1,6 @@
-execute pathogen#infect()
+" execute pathogen#infect() " no longer needed with vim 8 plugins
 
-" My Plugins: (clone into ~/.vim/bundle)
+" My Plugins: (clone each into ~/.vim/pack/vendor)
 " =================================
 " https://github.com/kien/ctrlp.vim
 " https://github.com/scrooloose/nerdtree
@@ -45,7 +45,7 @@ map <C-n> :NERDTreeToggle<CR>
 set guifont=Victor\ Mono\ 10
 
 if has("gui_running")
-  colorscheme darkblue
+  "colorscheme darkblue
   set lines=141 columns=141
 endif
 
