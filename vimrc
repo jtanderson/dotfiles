@@ -42,7 +42,7 @@ set backspace=2
 map <C-n> :NERDTreeToggle<CR>
 " map <C-t> :LLPStartPreview<CR>
 
-set guifont="Monaco:h16"
+set guifont=Victor\ Mono\ 10
 
 if has("gui_running")
   colorscheme darkblue
@@ -55,7 +55,7 @@ autocmd BufEnter *.tex colorscheme kellys
 autocmd BufEnter *.tex setlocal spell spelllang=en_us
 
 let g:Tex_DefaultTargetFormat = 'pdf'
-"let g:Tex_CompileRule_pdf = 'pdflatex --interaction=nonstopmode -synctex=1 $*'
+let g:Tex_CompileRule_pdf = 'pdflatex --interaction=nonstopmode -shell-escape -synctex=1 $*'
 let g:Tex_MultipleCompileFormats = 'pdf, aux'
 
 if os == "mac"
